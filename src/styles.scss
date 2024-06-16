@@ -1,3 +1,6 @@
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
 html,
 body,
 p,
@@ -14,7 +17,6 @@ html,
 body,
 app-root {
   height: 100%;
-  background-color: gray;
 }
 
 app-root {
