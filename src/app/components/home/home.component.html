@@ -1,3 +1,24 @@
-<div>
-    <button type="button" routerLink="/fornecedor/adicionar">Adicionar</button>
+<div class="d-flex flex-column">
+    <div class="d-flex justify-content-end mb-2">
+        <button type="button" class="btn btn-primary" routerLink="/fornecedor/adicionar">Adicionar</button>
+    </div>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Documento</th>
+                <th scope="col">Tipo Fornecedor</th>
+                <th class="text-center" scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fornecedor of fornecedores">
+                <th scope="row">{{ fornecedor.nome }}</th>
+                <td>{{ fornecedor.documento }}</td>
+                <td>{{ fornecedor.tipoFornecedor === 0 ? 'Pessoa Física' : 'Pessoa Jurídica' }}</td>
+                <td class="text-center">{{ fornecedor.ativo ? 'Ativo' : 'Inativo' }}</td>
+                
+            </tr>
+        </tbody>
+    </table>
 </div>
