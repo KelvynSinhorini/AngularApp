@@ -28,4 +28,8 @@ export class FornecedorService {
       subscriber.complete(); // Indica que a emissão está completa
     });
   }
+
+  addFornecedor(fornecedor: Fornecedor) {
+    FORNECEDOR_DATA.push(fornecedor);
+  }
 }
